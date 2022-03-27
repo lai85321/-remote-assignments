@@ -9,7 +9,8 @@ function countAandB(input) {
     return count
 }
 function toNumber(input) {
-    const map={
+    // Solution 1
+    /*const map={
         a:1,
         b:2,
         c:3,
@@ -18,7 +19,12 @@ function toNumber(input) {
     }
     for(let i=0;i<input.length;i++){
        input[i]=map[input[i]]
-    }
+    }*/
+    
+    // Solution 2
+    for(let i=0;i<input.length;i++){
+        input[i]=input[i].charCodeAt(0)-96
+     }
     return input
 }
 let input1 = ['a', 'b', 'c', 'a', 'c', 'a', 'c'];
