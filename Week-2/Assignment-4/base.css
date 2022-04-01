@@ -34,22 +34,23 @@ h3 {
   align-items: center;
 }
 
-/* main {
-  display: flex;
-} */
+main {
+  width: 100%;
+}
 
 .container {
   height: 700px;
-  width: 1500px;
-  margin-left: 200px;
-  margin-right: 200px;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 section {
   display: flex;
+  margin: 1%;
   padding-top: 10px;
   height: 300px;
   width: 45%;
