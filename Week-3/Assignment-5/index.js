@@ -1,13 +1,13 @@
 function twoSum(nums, target) {
         for (let i=0; i<nums.length; i++){
             let tmp = target-nums[i]
-            if(nums.includes(tmp)){
+            if(nums.includes(tmp)&&nums.indexOf(tmp)!==i){
                 return [i, nums.indexOf(tmp)]
             }
         }
     }
 
-console.log(twoSum([2, 7, 11, 15], 9))
+console.log(twoSum([3,2,4], 6))
 
 /*
 For example:
