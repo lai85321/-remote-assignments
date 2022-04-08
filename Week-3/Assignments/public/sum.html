@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>    
+    </head>
+    <body>
+        <form >
+            <div>
+                <label for="number">Please submit a number</label>
+                <input id="number" type="text" name="number">
+            </div>
+            <div>
+                <!-- <input type="button" onclick="callBackEnd()" value="Submit!" id="submit">  -->
+                <input type="button" value="Submit!" id="btn"> 
+        </form>
+        <p id="sum"></p>
+    </body>
+    <script>
+        /* onclick
+        function callBackEnd(){
+            let xhr = new XMLHttpRequest()
+            xhr.onreadystatechange = function(){
+                if (xhr.readyState===4){
+                    document.getElementById('sum').innerHTML=xhr.responseText
+                }
+            }
+            xhr.open('GET',`http://localhost:3000/data?number=${document.getElementById('number').value}`)
+            xhr.send()
+        }
+        */
+
+        //addEventListener
+        const btn = document.getElementById("btn")
+        let xhr = new XMLHttpRequest()
+
+        xhr.onreadystatechange = function(){
+            if (xhr.readyState===4){
+                document.getElementById('sum').innerHTML=xhr.responseText
+            }
+        }
+
+        btn.addEventListener('click',()=>{
+            let num = document.getElementById('number').value
+            xhr.open('GET',`http://localhost:3000/data?number=${num}`)
+            xhr.send()
+        })  
+    </script>
+</html>
