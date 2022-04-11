@@ -1,10 +1,6 @@
 function delayedResult(n1, n2, delayTime, callback) {
     // your code here
-    const total = n1+n2
-    function sum(){
-        callback(total)
-    }
-    setTimeout(sum, delayTime)
+    setTimeout(()=>callback(n1+n2), delayTime)
 }
 
 delayedResult(4, 5, 3000, function(result) {
